@@ -25,7 +25,7 @@ export default function TableDoc() {
               <td className="table-tr">{data.tnved}</td>
               <td className="table-tr">{data.full_product_name}</td>
               <td className="table-tr">{data.trademark}</td>
-              <td className="table-tr">Zenden</td>
+              <td className="table-tr"></td>
               <td className="table-tr">Adidas china</td>
               <td className="table-tr">{data.product_type}</td>
               <td className="table-tr">{data.color}</td>

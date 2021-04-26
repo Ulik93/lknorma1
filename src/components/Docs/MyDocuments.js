@@ -19,8 +19,8 @@ export default function MyDocuments({ docsList }) {
   const handleDeleteExcelFile = (id) => {
     dispatch(deleteExcelFileTable(id))
   }
-  const handleSendExcelFile = (id) =>{
-    dispatch(sendExcelFileTable(id))
+  const handleSendExcelFile = (id, is_order) =>{
+    dispatch(sendExcelFileTable(id, is_order))
   }
 
   return (
@@ -51,7 +51,7 @@ export default function MyDocuments({ docsList }) {
 
             <button
               className="card-footer"
-              onClick={() => handleSendExcelFile(excel)}
+              onClick={() => handleSendExcelFile(excel.id, true)}
             >
               Send
             </button>

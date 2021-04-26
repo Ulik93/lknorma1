@@ -44,12 +44,12 @@ export const deleteExcelFileTable = (id) => (dispatch) => {
     })
 }
 
-export const sendExcelFileTable = (excel) => (dispatch) => {
+export const sendExcelFileTable = (id, is_order) => (dispatch) => {
   dispatch({ type: constants.GET_TABLE_LOADING })
-  const baseURL = `${point}/api/reports/excel/`
+  const baseURL = `${point}/api/vlad/send/`
   const token = localStorage.getItem("token")
   axios
-    .post(baseURL, {excel: excel})
+    .post(baseURL, {is_order, id})
     .then((result) => {
       dispatch({ type: constants.UPLOAD_FILE_SUCCESS, payload: result })
     })
